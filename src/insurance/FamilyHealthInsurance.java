@@ -45,6 +45,7 @@ public class FamilyHealthInsurance extends HealthInsurance {
    @Override
    public double calcMonthlyInstallment(){
        double monthlyInstallment=0;
+       double totalMonthlyInstallment=0;
        for(int i=0;i<personCount;i++){
            if(familyMembers[i].getAge()<=10 || familyMembers[i].getAge()>=60){
            monthlyInstallment=MONTHLY_INSTALLMENT-(0.2*MONTHLY_INSTALLMENT);
@@ -53,13 +54,15 @@ public class FamilyHealthInsurance extends HealthInsurance {
                monthlyInstallment=MONTHLY_INSTALLMENT;
            }
            monthlyInstallment=calcFamilyDiscount(monthlyInstallment);
+           totalMonthlyInstallment=totalMonthlyInstallment+monthlyInstallment;
        }
-       return monthlyInstallment;
+       return totalMonthlyInstallment;
    }
    
    @Override
    public double calcYearlyInstallment(){
       double yearlyInstallment=0;
+      double totalYearlyInstallment=0;
        for(int i=0;i<personCount;i++){
            if(familyMembers[i].getAge()<=10 || familyMembers[i].getAge()>=60){
            yearlyInstallment=YEARLY_INSTALLMENT_ONETIME_PAYMENT-(0.2*YEARLY_INSTALLMENT_ONETIME_PAYMENT);
@@ -68,8 +71,9 @@ public class FamilyHealthInsurance extends HealthInsurance {
                yearlyInstallment=YEARLY_INSTALLMENT_ONETIME_PAYMENT;
            }
            yearlyInstallment=calcFamilyDiscount(yearlyInstallment);
+           totalYearlyInstallment=totalYearlyInstallment+yearlyInstallment;
        }
-       return yearlyInstallment; 
+       return totalYearlyInstallment; 
    }
    @Override
    public double calcExemption(int totalMonths) throws IncorrectMonthException{
@@ -92,6 +96,11 @@ public class FamilyHealthInsurance extends HealthInsurance {
    
    @Override
    public String toString(){
-       return "Hi";
+       
+   String toReturn="";
+       for(int i=0;i<personCount;i++){
+       toReturn+=String.format("%-10s %-10s %-10s %3.2f; Family Monthly Installment: $%3.2f; Family yearly Installment: $%3.2f\n",familyMembers[i].getFirstName(),familyMembers[i].getLastName(),familyMembers[i].getGender(),familyMembers[i].getAge(),this.calcMonthlyInstallment(),this.calcYearlyInstallment());
    }
+       return toReturn;
+}
 }

@@ -80,7 +80,7 @@ public class Person {
     
     @Override
    public String toString(){
-        return String.format("%3.2f -10%s -10%s -10%s", age,firstName,lastName,gender);
+        return String.format("%-10s %-10s %-10s %3.2f", firstName,lastName,gender,age);
    } 
     
 }

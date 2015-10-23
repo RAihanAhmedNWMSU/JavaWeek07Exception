@@ -9,11 +9,11 @@ package insurance;
  *
  * @author Raihan Ahmed Mohammed
  */
-public class PersonHealthInsurance extends HealthInsurance {
+public class PersonalHealthInsurance extends HealthInsurance {
   
    private Person person;
 
-    public PersonHealthInsurance(Person person) {
+    public PersonalHealthInsurance(Person person) {
         this.person = person;
     }
   
@@ -69,6 +69,6 @@ public class PersonHealthInsurance extends HealthInsurance {
 
    @Override
    public String toString(){
-       return "Hi Person Health Insurance";
+       return String.format("%-10s %-10s %-10s %3.2f; Monthly Installment : $%3.2f; Yearly Installment: $%3.2f",person.getFirstName(),person.getLastName(),person.getGender(),person.getAge(), this.calcMonthlyInstallment(),this.calcYearlyInstallment());
    }
 }
