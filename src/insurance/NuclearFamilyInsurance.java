@@ -11,6 +11,11 @@ package insurance;
  */
 public class NuclearFamilyInsurance extends FamilyHealthInsurance{
 
+    
+    /**
+     * It calls the super class constructor.
+     * @param numberOfPersons the total number of persons.
+     */
     public NuclearFamilyInsurance(int numberOfPersons) {
         super(numberOfPersons);
     }
