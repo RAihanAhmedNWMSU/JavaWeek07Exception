@@ -190,8 +190,11 @@ public class Driver
         //20 .Uncomment the below code.You can observe exceptions on the console. 
         // Explain each exception in the comment after the statement where the 
         // exception occurs with your own words.
-        
-//     try 
+    
+ 
+        // An exception of 'ArrayIndexOutOfBoundsException' occurs as we try to insert an element in the
+        // Person array using the instance familyHealth of FamilyHealthInsurance Class
+//    try 
 //        {   
 //            familyHealth.addPerson(person1);
 //        } catch (IllegalFamilyMemberException ex) 
@@ -199,15 +202,19 @@ public class Driver
 //            System.out.println(ex.getMessage());
 //        }
         
-        
-//        try 
-//        {
-//            familyHealth.calcLifeInsurance(-10);
-//        } catch (IncorrectMonthException ex) {
-//            System.out.println(ex.getMessage());
+        // A totalMonth Value of -10 is passed to the calcLifeInsurance method which checks
+        // if the totalMonth value is less than 0. The exception is caught and a message 'null' is printed.
+       // try 
+      // {
+        //    familyHealth.calcLifeInsurance(-10);
+      //  } catch (IncorrectMonthException ex) {
+    //        System.out.println(ex.getMessage());
+  //          System.out.println(ex.getMessage());
 //        }
         
-        
+     
+        // A totalMonth Value of -20 is passed to the calcExemption method which checks
+        // if the totalMonth value is less than 0. The exception is caught and a message 'null' is printed.    
 //        try 
 //        {
 //            health.calcExemption(-20);
@@ -215,7 +222,7 @@ public class Driver
 //        catch (IncorrectMonthException ex) 
 //        {
 //            System.out.println(ex.getMessage());
-//        }
+//      }
         
         
         
