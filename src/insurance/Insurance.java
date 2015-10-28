@@ -13,12 +13,12 @@ public interface Insurance {
     /**
      * MONTHLY_INSTALLMENT assigned to 1000
      */
-    static double MONTHLY_INSTALLMENT=1000;
+    static final double MONTHLY_INSTALLMENT=1000;
     /**
      * YEARLY_INSTALLMENT_ONETIME_PAYMENT assigned to 10000.
 
      */
-    static double YEARLY_INSTALLMENT_ONETIME_PAYMENT=10000;
+    static final double YEARLY_INSTALLMENT_ONETIME_PAYMENT=10000;
     
     /**
      * Calculates monthly installment.
