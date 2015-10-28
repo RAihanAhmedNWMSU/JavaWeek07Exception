@@ -65,7 +65,7 @@ public class Driver
         System.out.println("Testing the calcMontlyInstallment() of "
                 + "FamilyHealthInsurance:");
         
-        System.out.println("Monthly installment in Family health insurance class: $"+familyHealth.calcMonthlyInstallment());
+        System.out.println("Monthly installment in Family health insurance class: $"+String.format("%.2f",familyHealth.calcMonthlyInstallment()));
         //6. Print the "Yearly installment in Family health insurance class: $"
         //  using 'familyHealth' object
         // Note: Limit the output of calcYearlyInstallment() to 2 decimal points.
