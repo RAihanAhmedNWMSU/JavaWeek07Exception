@@ -103,7 +103,7 @@ public class Person {
      * All the private variable are separated by one space. Print the String values left 
  justified by 10 spaces and print the floating point values right 
  justified by 3 spaces with two number decimal values. 
-     * @return 
+     * @return A string representation of details of the person.
      */
     @Override
    public String toString(){
