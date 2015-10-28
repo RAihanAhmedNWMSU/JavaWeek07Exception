@@ -193,7 +193,7 @@ public class Driver
     
  
         // An exception of 'ArrayIndexOutOfBoundsException' occurs as we try to insert an element in the
-        // Person array using the instance familyHealth of FamilyHealthInsurance Class
+        // Person array whose length is 4 (as we give 4 values in Person.txt ), using the instance familyHealth of FamilyHealthInsurance Class
 //    try 
 //        {   
 //            familyHealth.addPerson(person1);
